@@ -451,30 +451,14 @@
       delay: 0.3
     });
 
-    // 2. Sloth SVG — stagger in groups
+    // 2. Sloth SVG — smooth entrance
     tl.from('.sloth-wrapper', {
       opacity: 0,
-      scale: 0.85,
-      y: 30,
-      duration: 1,
+      scale: 0.9,
+      y: 40,
+      duration: 1.2,
       ease: 'back.out(1.4)'
     }, '-=0.3');
-
-    // Stagger sloth path groups
-    const slothGroups = [
-      '.sloth-body', '.sloth-fur', '.sloth-details', '.sloth-highlights',
-      '.sloth-spots', '.sloth-face', '.sloth-eyes', '.sloth-cheeks',
-      '.sloth-mouth', '.sloth-nose', '.sloth-gray', '.sloth-shadow',
-      '.sloth-arms', '.sloth-belly-spots', '.sloth-accents', '.sloth-micro', '.sloth-bottom'
-    ];
-
-    slothGroups.forEach((group, i) => {
-      tl.from(group, {
-        opacity: 0,
-        duration: 0.15,
-        ease: 'none'
-      }, `-=${i === 0 ? 0.5 : 0.12}`);
-    });
 
     // 3. Heading letters stagger
     tl.to('.heading .char', {
