@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>latelogic - Coming Soon</title>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vthzfevqgr");
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
@@ -150,6 +157,35 @@
       opacity: 0;
     }
 
+
+    /* LinkedIn link */
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border: 1.5px solid var(--accent);
+      border-radius: 50px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      opacity: 0;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    .linkedin-link:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .linkedin-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
 
     /* Footer */
     .footer {
@@ -422,6 +458,12 @@
     <!-- Tagline -->
     <p class="tagline">We're crafting something amazing. Taking it slow, doing it right.</p>
 
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/latelogic" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Follow on LinkedIn
+    </a>
+
     <!-- Footer -->
     <p class="footer">latelogic &copy; 2026. Good things take time.</p>
   </div>
@@ -489,7 +531,15 @@
     }, '-=0.3');
     gsap.set('.tagline', { y: 15 });
 
-    // 6. Footer
+    // 6. LinkedIn link
+    tl.to('.linkedin-link', {
+      opacity: 1,
+      y: 0,
+      duration: 0.5
+    }, '-=0.2');
+    gsap.set('.linkedin-link', { y: 10 });
+
+    // 7. Footer
     tl.to('.footer', {
       opacity: 1,
       duration: 0.5
