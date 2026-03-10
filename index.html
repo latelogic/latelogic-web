@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>latelogic - Coming Soon</title>
+  <title>latelogic - late. but worth the wait ⏳</title>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -71,7 +71,7 @@
     .container {
       max-width: 720px;
       width: 100%;
-      padding: 40px 24px;
+      padding: 40px 24px 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -189,7 +189,11 @@
 
     /* Footer */
     .footer {
-      margin-top: 60px;
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
       font-size: 0.8rem;
       color: #B5AFA9;
       opacity: 0;
@@ -471,9 +475,9 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script>
-    // Split "Coming Soon" into individual characters
+    // Split heading into individual characters
     const headingEl = document.getElementById('heading');
-    const text = 'Coming Soon';
+    const text = 'late. but worth the wait \u23F3';
     text.split('').forEach(char => {
       if (char === ' ') {
         headingEl.innerHTML += '<span class="space"></span>';
